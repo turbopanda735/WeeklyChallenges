@@ -28,10 +28,7 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            if (number1 <= number2)
-                return number1;
-            else return number2;
-            
+            return Math.Min(number1, number2);
         }
 
         public long Multiply(long factor1, long factor2)
@@ -41,12 +38,15 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            return $"Hello, {nameOfPerson}!";
+            if (nameOfPerson == "" || nameOfPerson == " ")
+                return "Hello!";
+            else
+                return $"Hello, {nameOfPerson}!";
         }
 
         public string GetHey()
         {
-            return "Hey!";
+            return "HEY!";
         }
     }
 }
